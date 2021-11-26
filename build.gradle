@@ -104,6 +104,19 @@ subprojects {
         }
     }
 
+plugins {
+  id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "wwh1ter0se_tsunami-security-scanner"
+    property "sonar.organization", "wwh1ter0se"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
+
     plugins.withId('java') {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
